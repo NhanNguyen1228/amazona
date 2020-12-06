@@ -8,11 +8,14 @@ import { cartReducer } from "./reducers/cartReducers";
 import {
     userRegisterReducer,
     userSigninReducer,
+    userDetailsReducer,
+    userUpdateProfileReducer,
 } from './reducers/userReducers';
 import {
     orderCreateReducer,
     orderDetailsReducer,
     orderPayReducer,
+    orderMineListReducer,
 } from './reducers/orderReducers';
 
 const initialState = {
@@ -41,6 +44,9 @@ const reducer = combineReducers({
     userRegister: userRegisterReducer,
     userSignin: userSigninReducer,
     orderPay: orderPayReducer,
+    orderMineList: orderMineListReducer,
+    userDetails: userDetailsReducer,
+    userUpdateProfile: userUpdateProfileReducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
